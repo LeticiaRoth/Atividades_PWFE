@@ -39,4 +39,4 @@ O objetivo é fortalecer os conhecimentos essenciais do desenvolvimento front-en
 
 1. Faça o clone do repositório:
    ```bash
-   git clone https://github.com/LeticiaRoth/Atividade_PWFE.git
+   git clone https://github.com/LeticiaRoth/Atividades_PWFE.git
