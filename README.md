@@ -4,7 +4,7 @@
   <img src="Logo_PWFE/PWFE.png" alt="Ícone de Front-End" width="140">
 </p>
 
-Este repositório reúne conteúdos e atividades desenvolvidas na disciplina de **Programação Web Front-End (PWFE)**, com foco em HTML, CSS, JavaScript e boas práticas de desenvolvimento para interfaces web interativas e responsivas.
+Este repositório reúne conteúdos e atividades desenvolvidas na disciplina de **Programação Web Front-End (PWFE)**, com foco em HTML, CSS, JavaScript, React e boas práticas de desenvolvimento para interfaces web interativas e responsivas.
 
 O objetivo é fortalecer os conhecimentos essenciais do desenvolvimento front-end por meio de exercícios práticos, conceitos teóricos e desafios aplicados ao design e à experiência do usuário.
 
