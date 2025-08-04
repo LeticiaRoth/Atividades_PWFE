@@ -173,3 +173,9 @@ switch (amarela){
 }
 //break encontra a resposta e dá o break
 //se não encontrar vai para o default
+
+//OPERADOR TERNÁRIO
+//IF em linha, se for verdade vem a primeira parte, se não vem a segunda
+let idade  = prompt("Digite sua idade:");
+let maiorDidade = idade > 18 ? "sim": "não";
+console.log(maiorDidade)
