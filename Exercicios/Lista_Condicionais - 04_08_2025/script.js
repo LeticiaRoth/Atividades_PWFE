@@ -137,3 +137,61 @@ let credito = Number(prompt("Digite o valor de crédito:"));
 
 let saldoAtual = saldo - debito + credito;
 console.log("Saldo atual da conta " + numeroCnta + " é de R$ " + saldoAtual.toFixed(2));
+
+//Console de separação de exercícios
+console.log("");
+console.log("EXERCÍCIO 9")
+
+let num1 = Number(prompt("Digite o primeiro número:"));
+let num2 = Number(prompt("Digite o segundo número:"));
+let num3 = Number(prompt("Digite o terceiro número:"));
+
+let maior;
+
+//Usando o AND
+if (num1 >= num2 && num1 >= num3) {
+  maior = num1;
+} else if (num2 >= num1 && num2 >= num3) {
+  maior = num2;
+} else {
+  maior = num3;
+}
+
+console.log("Maior número: " + maior);
+
+
+//Console de separação de exercícios
+console.log("");
+console.log("EXERCÍCIO 10")
+
+let salarioAtual = Number(prompt("Digite o salário atual:"));
+//Coloca em maiusculo
+let genero = prompt("Digite o gênero do funcionário (M/F):").toUpperCase();
+let anosTrabalhados = Number(prompt("Digite há quantos anos trabalha na empresa:"));
+
+let aumento = 0;
+
+if (genero === "F"){
+    if(anosTrabalhados < 15){
+        aumento = 0.05;
+    }else if (anosTrabalhados <= 20){
+        aumento = 0.12;
+    }else{
+        aumento= 0.23;
+    }
+}else if (genero === "M"){
+    if (anosTrabalhados < 20){
+        aumento = 0.03;
+    }else if (anosTrabalhados <= 30){
+        aumento = 0.13;
+    }else{
+        aumento = 0.25;
+    }
+}else{
+    console.log("Opção inválida");
+}
+
+if (aumento > 0) {
+  let novoSalario = salarioAtual * (1 + aumento);
+  console.log("O novo salário é R$ " + novoSalario.toFixed(2));
+}
