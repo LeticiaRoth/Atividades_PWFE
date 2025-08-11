@@ -70,6 +70,7 @@ console.log("");
 //Embutidas no navegador, um bloco de código reutilizável que pode ser executado quando chamado;
 //Para usar uma função devemos fazer a declaraçãio dela, com a seguinte sintaxe;
 //function name(){}
+//Funções são globais
 console.log("FUNÇÕES");
 //Função sem paramentro;
 function helou(){
@@ -82,10 +83,15 @@ helou();
 //Declaradas como conteúdo de uma variável;
 const subtrair = function(N1, N2){
     let resultado = N1 - N2
-    console.log("Função anônima",resultado)
+    console.log("Função anônima: ",resultado)
 }
 subtrair(4,2);
 
+
 //Arrow Function
 //Forma concisa de escrever uma função em JS, otimiza a escrita, deixando limpo e enxuto;
-//
+const dividirArrowComCorpo = (n1, n2) => {
+  return n1 / n2;
+};
+
+console.log("Arrow Function: ",dividirArrowComCorpo(8, 2)); 
