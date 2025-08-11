@@ -95,3 +95,16 @@ const dividirArrowComCorpo = (n1, n2) => {
 };
 
 console.log("Arrow Function: ",dividirArrowComCorpo(8, 2)); 
+
+//Seleciona o selector
+let btn = document.querySelector("button");
+
+function random(numCor){
+    return Math.floor(Math.random() * (numCor + 1));
+}
+btn.onclick = function(){
+    let cor = 
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) +")";
+
+    document.body.style.backgroundColor = cor;
+}
