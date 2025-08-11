@@ -71,6 +71,21 @@ console.log("");
 //Para usar uma função devemos fazer a declaraçãio dela, com a seguinte sintaxe;
 //function name(){}
 console.log("FUNÇÕES");
+//Função sem paramentro;
+function helou(){
+    console.log("Função sem parametro: HELOU AMIGO");
+}
+helou();
 
 //Função anônima
+// São funçõe sem nome, executadas no momento da execução do código, chamada apenas onde está;
+//Declaradas como conteúdo de uma variável;
+const subtrair = function(N1, N2){
+    let resultado = N1 - N2
+    console.log("Função anônima",resultado)
+}
+subtrair(4,2);
+
+//Arrow Function
+//Forma concisa de escrever uma função em JS, otimiza a escrita, deixando limpo e enxuto;
 //
