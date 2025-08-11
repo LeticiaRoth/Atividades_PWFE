@@ -8,3 +8,10 @@ h1{
 h2{
     text-align: center;
 }
+
+img{
+    width: 550px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
