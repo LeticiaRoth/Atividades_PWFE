@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to left, #370617, #6a040f, #820307, #91260e,#b85135,#b87f35); /* Transição do verde escuro para o verde claro */
+    background: linear-gradient(to left, #370617, #6a040f, #820307, #91260e,#b85135,#b87f35);
     padding: 20px;
     font-weight:bold;
     text-align: center;
