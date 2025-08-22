@@ -1,0 +1,23 @@
+/* Corpo da página */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255); /* fundo preto */
+    color: white;            /* texto branco */
+}
+
+header {
+    background: linear-gradient(to left, #370617, #6a040f, #820307, #91260e,#b85135,#b87f35); /* Transição do verde escuro para o verde claro */
+    padding: 20px;
+    font-weight:bold;
+    text-align: center;
+    font-size: 24px;
+    margin: 0px;
+    letter-spacing: 3px;
+    box-shadow: 20px #5e2025;
+
+}
