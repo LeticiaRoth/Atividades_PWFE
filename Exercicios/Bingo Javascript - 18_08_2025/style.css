@@ -1,34 +1,195 @@
-/* Corpo da página */
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 
 body {
-    background-color: rgb(255, 255, 255); /* fundo preto */
-    color: white;            /* texto branco */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #3a7bd5 0%, #3a60b5 25%, #2c4a9d 50%, #1e3485 75%, #0f1e6d 100%);
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.containerPrincipal {
+    width: 100%;
+    max-width: 1300px;
+    background-color: #ffffff; 
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
 }
 
 header {
-    background: linear-gradient(to left, #370617, #6a040f, #820307, #91260e,#b85135,#b87f35);
-    padding: 20px;
-    font-weight:bold;
+    font-size: 2.8rem;
+    font-weight: 700;
     text-align: center;
-    font-size: 24px;
-    margin: 0px;
-    letter-spacing: 3px;
-    box-shadow: 20px #5e2025;
-
+    color: #333;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    letter-spacing: 10px;
+    text-transform: uppercase;
 }
 
-table{
-    background-color: #ef97b6;
+.conteudoJogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
 }
-tbody{
-    background-color: #b85135;
-    width: 30px;
+
+.containerTabela {
+    flex-grow: 1;
 }
-tr{
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+th, td {
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    transition: transform 0.2s ease-in-out; 
+}
+
+th {
+    color: white;
+    font-size: 2rem;
+}
+
+/* Cores individuais para cada letra do BINGO */
+#letraB { background-color: #4285F4; } 
+#letraI { background-color: #EA4335; } 
+#letraN { background-color: #FBBC05; } 
+#letraG { background-color: #34A853; } 
+#letraO { background-color: #A142F4; } 
+
+
+td {
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 1.2rem;
+}
+
+.marcado {
+    background-color: #20c997;
     color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(32, 201, 151, 0.5);
+}
+
+.containerSorteador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 320px;
+    min-width: 300px;
+}
+
+.tituloSorteador {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+#numeroAtualSorteado {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 4px solid #dee2e6;
+    color: #333;
+    border-radius: 50%;
+    font-size: 3.5rem;
+}
+
+.containerBotoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.containerBotoes button {
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #6c757d;
+    color: white;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.containerBotoes button:hover {
+    background-color: #5a6268;
+}
+
+.historicoSorteadosContainer {
+    width: 100%;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    min-height: 100px;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+#listaNumerosSorteados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.numeroSorteado {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+
+.confete {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    top: -20px;
+    opacity: 0;
+    animation: quedaDeConfete 5s linear forwards;
+}
+
+@keyframes quedaDeConfete {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
 }
