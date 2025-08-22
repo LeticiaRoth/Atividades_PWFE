@@ -21,3 +21,14 @@ header {
     box-shadow: 20px #5e2025;
 
 }
+
+table{
+    background-color: #ef97b6;
+}
+tbody{
+    background-color: #b85135;
+    width: 30px;
+}
+tr{
+    color: #ffffff;
+}
