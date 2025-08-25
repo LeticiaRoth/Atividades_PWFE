@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const numeroAtualSorteadoElemento = document.getElementById('numeroAtualSorteado');
     const listaNumerosSorteadosElemento = document.getElementById('listaNumerosSorteados');
     const corpoTabelaBingoElemento = document.getElementById('corpoTabelaBingo');
-    
+  
+
     // Variáveis de estado do jogo
     let numerosDisponiveis = [];
     let numerosSorteados = [];
@@ -25,6 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function obterLetra(numero){
+        const num = parseInt(numero);
+        if (num >= 1 && num <= 15) return 'B';
+        if (num >= 16 && num <= 30) return 'I';
+        if (num >= 31 && num <= 45) return 'N';
+        if (num >= 46 && num <=60) return 'G';
+        if (num >= 61 && num <= 75) return 'O';
+        return '';
+    }
+
     // Função para sortear um novo número
     function sortearNumero() {
         if (numerosDisponiveis.length === 0) {
@@ -36,15 +47,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const indiceAleatorio = Math.floor(Math.random() * numerosDisponiveis.length);
         const numeroSorteado = numerosDisponiveis.splice(indiceAleatorio, 1)[0];
         numerosSorteados.push(numeroSorteado);
+
         numeroAtualSorteadoElemento.textContent = numeroSorteado;
+
+        //Defnição da letra no histórico
+        const letra = obterLetra(numeroSorteado);
+        const spanNumero = document.createElement('p');
+        spanNumero.textContent = `${letra}-${numeroSorteado}`;
         
-        const spanNumero = document.createElement('span');
-        spanNumero.textContent = numeroSorteado;
+
+
         spanNumero.classList.add('numeroSorteado');
+        spanNumero.classList=`letra-${letra}`
         listaNumerosSorteadosElemento.appendChild(spanNumero);
         
         for (const celula of todasAsCelulas) {
-            if (celula.textContent === numeroSorteado) {
+            if ((celula.textContent) === numeroSorteado) {
                 celula.classList.add('marcado');
                 break;
             }

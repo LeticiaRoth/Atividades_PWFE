@@ -81,6 +81,9 @@ td {
     font-size: 1.2rem;
 }
 
+p{
+    margin: 0;
+}
 .marcado {
     background-color: #20c997;
     color: #ffffff;
