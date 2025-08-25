@@ -9,11 +9,17 @@
 </head>
 <body>
     <script src="script.js"></script>
+
     <div class="containerPrincipal">
-        <header>BINGO</header>
+
+        <header>
+            <h1>BINGO</h1>
+        </header>
 
         <main class="conteudoJogo">
-            <div class="containerTabela">
+
+            <section class="containerTabela" aria-label="Tabela de Números do Bingo">
+                <h2 class="visually-hidden">Tabela do Bingo</h2> <!-- para acessibilidade -->
                 <table>
                     <thead>
                         <tr>
@@ -25,6 +31,7 @@
                         </tr>
                     </thead>
                     <tbody id="corpoTabelaBingo">
+                        <!-- Linhas da Tabela -->
                         <tr><td>01</td><td>16</td><td>31</td><td>46</td><td>61</td></tr>
                         <tr><td>02</td><td>17</td><td>32</td><td>47</td><td>62</td></tr>
                         <tr><td>03</td><td>18</td><td>33</td><td>48</td><td>63</td></tr>
@@ -42,22 +49,28 @@
                         <tr><td>15</td><td>30</td><td>45</td><td>60</td><td>75</td></tr>
                     </tbody>
                 </table>
-            </div>
+            </section>
 
-            <div class="containerSorteador">
+            <section class="containerSorteador" aria-label="Sorteador de Números">
                 <div class="tituloSorteador">Sorteador</div>
-                <div id="numeroAtualSorteado">-</div>
+
+                <div id="numeroAtualSorteado" aria-live="polite">-</div>
+
                 <div class="containerBotoes">
                     <button id="botaoSortear">Sortear</button>
                     <button id="botaoBingo">Bingo!</button>
                     <button id="botaoResetar">Resetar</button>
                 </div>
-                 <div class="historicoSorteadosContainer">
-                    <span id="listaNumerosSorteados"></span>
+
+                <div class="historicoSorteadosContainer">
+                    <h3 class="visually-hidden">Histórico de números sorteados</h3>
+                    <span id="listaNumerosSorteados" aria-live="polite"></span>
                 </div>
-            </div>
+            </section>
+
         </main>
+
     </div>
-    
+
 </body>
 </html>
