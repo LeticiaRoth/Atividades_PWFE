@@ -1,0 +1,44 @@
+*{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(163, 221, 202, 0.637);
+    justify-items: center;
+    margin-top: 150px;
+}
+
+#aposta{
+    height: 60PX;
+    width: 150px;
+    background-color: rgb(1, 53, 4);
+    color: white ;
+    margin-left: 130px;
+}
+
+#aposta:hover{
+    background-color: rgb(194, 9, 178);
+    color: aliceblue;
+}
+
+.containerBest{
+    background-color: rgb(246, 245, 252);
+    width: 400px;
+    border: 2px solid rgb(2, 68, 43);
+    justify-content: center;
+    justify-items: center;
+}
+
+#divaTullia{
+    display: block; 
+    margin-left: auto; 
+    border: 3px solid rgb(0, 65, 70);
+    margin-right: auto;
+}
+
+#saldo{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 23, 58);
+}
