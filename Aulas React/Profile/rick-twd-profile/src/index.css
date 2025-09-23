@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.appContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #212529;
+  background: linear-gradient(to right, #0a1128, #0a1927);
+  color: #f8f9fa; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#perfilCard {
+  background-color: #343a40; 
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+  max-width: 800px;
+  border: 1px solid #495057; 
+}
+
+.cardContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.perfilImagemContainer {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 5px solid #edf0ed; 
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-top: 90px;
+}
+
+.perfilImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.perfilImagemContainer:hover .perfilImage {
+  opacity: 0.9; 
+  transform: scale(1.02); 
+}
+
+.perfilTextoContainer {
+  text-align: left;
+  color: #f8f9fa; 
+  flex-grow: 1;
+}
+
+.nomePerfil {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #ffffff; 
+}
+
+dl {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+dt {
+  font-weight: bold;
+  color: #e9ecef; 
+}
+
+dd {
+  color: #ced4da; 
+  margin: 0 0  15px;
+  text-align: left;
+}
+
+.perfilDescricao {
+  line-height: 1.6;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 300;
+  color: #ced4da; 
+}
